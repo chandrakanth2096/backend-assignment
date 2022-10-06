@@ -1,0 +1,44 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/api/users?page=0&limit=10&name=Art&sort=-age
+
+###
+
+POST http://localhost:3000/api/users/
+Content-Type: application/json
+
+{
+  "id": 2,
+  "first_name": "Josephine Art",
+  "last_name": "Darakjy",
+  "company_name": "Chanay, Jeffrey A Esq",
+  "city": "Brighton",
+  "state": "MI",
+  "zip": 48116,
+  "email": "josephine_darakjy@darakjy.org",
+  "web": "http://www.chanayjeffreyaesq.com",
+  "age": 48
+}
+
+###
+
+GET http://localhost:3000/api/users/2/
+
+###
+
+PUT http://localhost:3000/api/users/2/
+Content-Type: application/json
+
+{
+  "first_name": "Josephine",
+  "last_name": "Darakjy Art",
+  "age": 48
+}
+
+###
+
+DELETE http://localhost:3000/api/users/407/
+
+###
